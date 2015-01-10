@@ -3,7 +3,7 @@
 # Recipe:: default
 # Author:: Shen DeShayne <shennyg@gmail.com>
 
-
+=begin
 # install user
 include_recipe 'user'
 
@@ -18,6 +18,7 @@ group "www-data" do
   members node['user']['new_user']
   append true
 end
+=end
 
 # install nginx
 include_recipe 'nginx'
