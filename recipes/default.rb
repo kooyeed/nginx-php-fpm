@@ -18,7 +18,8 @@ group "www-data" do
 end
 =end
 
-puts node['user']['new_user']
+puts node
+puts node['user']
 
 # install nginx
 include_recipe 'nginx'
