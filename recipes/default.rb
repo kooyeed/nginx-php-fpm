@@ -4,6 +4,7 @@
 # Author:: Shen DeShayne <shennyg@gmail.com>
 #
 
+=begin
 # create new user
 user_account node['user']['new_user'] do
   ssh_keys node['user']['authorized_keys']
@@ -15,6 +16,9 @@ group "www-data" do
   members node['user']['new_user']
   append true
 end
+=end
+
+puts node['user']['new_user']
 
 # install nginx
 include_recipe 'nginx'
